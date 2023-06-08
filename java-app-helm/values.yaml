@@ -4,8 +4,6 @@
 
 replicaCount: 1
 
-name: java-app-helm
-
 image:
   repository: public.ecr.aws/f2m3w5c9/java-demo-app
   pullPolicy: IfNotPresent
