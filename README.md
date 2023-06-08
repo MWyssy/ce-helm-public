@@ -31,7 +31,7 @@ You are now going to convert the NGiNX container from the [ce-gitops-argocd](htt
 Firstly create the helm chart, on the command line whilst within this repository run
 
 ```
-helm create nginx-argo-example
+helm create nginx-argo-helm-example
 ```
 
 You should notice this will create a new directory called **nginx-argo-example**
@@ -40,7 +40,7 @@ Explore the files and then using what you know about Helm (you can explore the N
 
 You will notice that the starter code produced by `helm create` actually produces a Helm chart for NGiNX but it is over complicated for our needs - you won't need a serviceaccount, ingress or hpa. Use your helm knowledge to strip it back to only what is needed.
 
-**💡HINT:** You might want to install VS Code extensions such as the [VS Code Kubernetes Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-to) and the [Helm Intellisense](https://marketplace.visualstudio.com/items?itemName=Tim-Koehler.helm-intellisense) extension to help with your editing experience. 
+**💡HINT:** You might want to install VS Code extensions such as the [VS Code Kubernetes Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-to) and the [Helm Intellisense](https://marketplace.visualstudio.com/items?itemName=Tim-Koehler.helm-intellisense) extension to help with your editing experience.
 
 ### Manual deployment
 
@@ -49,7 +49,7 @@ You will notice that the starter code produced by `helm create` actually produce
 Once you have edited your Helm chart, try installing it into your cluster manually using the `helm install` command, replacing the `CHART_NAME` with your desired chart name:
 
 ```
-helm install CHART_NAME ./nginx-argo-example
+helm install CHART_NAME ./nginx-argo-helm-example
 ```
 
 You can use `kubectl get pods` to verify that your chart has been installed successfully or alternatively use `helm list` to see which helm charts are installed.
@@ -91,5 +91,3 @@ See if you can create the helm chart and get it installed using ArgoCD
 [Helm documentation](https://helm.sh/docs/)
 
 [VS Code Kubernetes Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-to)
-
-
